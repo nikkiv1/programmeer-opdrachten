@@ -13,5 +13,5 @@ function som (a, b) {
   
   
   return uitkomst;
-};
+}
 

@@ -1,4 +1,5 @@
 module.exports = {isPositief}
+
 /* Algoritmiek opgave #1
    Opdracht: pas de functie zo aan,
    dat de functie true geeft als 'getal'

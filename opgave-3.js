@@ -1,4 +1,5 @@
 module.exports = {grootsteGetal}
+
 /* Algoritmiek opgave #3
    Opdracht: pas de functie zo aan,
    dat de functie het grootste getal
@@ -6,8 +7,8 @@ module.exports = {grootsteGetal}
 */
 
 function grootsteGetal(a, b) {
-  var uitkomst = a;
+  var uitkomst = undefined;
   // vul hieronder aan
   
   return uitkomst;
-};
+}
