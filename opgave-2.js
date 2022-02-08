@@ -8,9 +8,9 @@ module.exports = {som}
 
 function som (a, b) {
   var uitkomst = 0;
+  
   // vul hieronder aan:
 
-  
   
   return uitkomst;
 }

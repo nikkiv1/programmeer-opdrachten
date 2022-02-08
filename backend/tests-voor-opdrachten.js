@@ -11,6 +11,8 @@ const opgave10 = require('../opgave-10.js')
 const chai = require('chai')
 const expect = chai.expect
 const assert = chai.assert
+const addContext = require('mochawesome/addContext');
+
 
 
 /* ******************* */

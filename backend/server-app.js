@@ -32,7 +32,8 @@ app.get('/', function(req, res){
       reportFilename: 'testresultaat',
       quiet: false,
       html: true,
-      json: false
+      json: false,
+      code: false
     }
   });
   mocha.addFile(path.join(__dirname, 'tests-voor-opdrachten.js'))

@@ -10,9 +10,7 @@ module.exports = {isPositief}
 function isPositief(getal) {
   var teruggeefWaarde;
 
-  if (getal < 0) {
-    getal = false;
-  }
+  // vul hier aan:
   
 
   return teruggeefWaarde;
