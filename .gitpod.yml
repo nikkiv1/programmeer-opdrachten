@@ -6,4 +6,4 @@ tasks:
     init: |
       cd backend
       npm install
-    command: node backend/server-app.js
+    command: node server-app.js
