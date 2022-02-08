@@ -1,0 +1,6 @@
+ports:
+  - port: 3000
+    onOpen: open-browser
+tasks:
+  - name: testreport
+    command: node backend/server-app.js
