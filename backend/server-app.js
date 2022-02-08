@@ -28,6 +28,7 @@ app.get('/', function(req, res){
   var mocha = new Mocha({
     reporter: 'mochawesome',
     reporterOptions: {
+      reportDir: '',
       reportFilename: 'testresultaat',
       quiet: false,
       html: true,
