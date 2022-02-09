@@ -8,7 +8,7 @@ module.exports = {isPositief}
 */
 
 function isPositief(getal) {
-  var teruggeefWaarde;
+  var teruggeefWaarde = undefined;
 
   // vul hier aan:
   
