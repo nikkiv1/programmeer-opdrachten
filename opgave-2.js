@@ -7,7 +7,7 @@ module.exports = {som}
 */
 
 function som (a, b) {
-  var uitkomst = 0;
+  var uitkomst = undefined;
   
   // vul hieronder aan:
 
