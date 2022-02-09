@@ -10,7 +10,7 @@ const port = 3000
 app.get('/', function(req, res){
   function sendIt() {
     var options = {
-      root: path.join(__dirname)
+      root: path.join(__dirname, 'public')
     }
     var fileName = 'testresultaat.html';
 
@@ -28,7 +28,7 @@ app.get('/', function(req, res){
   var mocha = new Mocha({
     reporter: 'mochawesome',
     reporterOptions: {
-      reportDir: '',
+      reportDir: 'public',
       reportFilename: 'testresultaat',
       quiet: false,
       html: true,
@@ -71,7 +71,7 @@ app.get('/', function(req, res){
   
 })
 
-app.use(express.static('backend'));
+app.use(express.static('public'));
 
 app.listen(port, () => {
   console.log(`Backend app listening on port ${port}`)
