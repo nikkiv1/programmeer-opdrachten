@@ -8,6 +8,8 @@ const opgave7 = require('../opgave-7.js')
 const opgave8 = require('../opgave-8.js')
 const opgave9 = require('../opgave-9.js')
 const opgave10 = require('../opgave-10.js')
+const opgave11 = require('../opgave-11.js')
+const opgave12 = require('../opgave-12.js')
 const chai = require('chai')
 const expect = chai.expect
 const assert = chai.assert
@@ -236,7 +238,8 @@ describe('Opgave 10', function() {
       expect(opgave10.aantalKeerA("dessert")).to.equal(0, 'aantalKeerA("dessert") zou 0 terug moeten geven');
       expect(opgave10.aantalKeerA("doktersopleiding")).to.equal(0, 'aantalKeerA("doktersopleiding") zou 3 terug moeten geven');
     });
-  });describe('aantalKeerA( string met a\'s )...', function() {
+  });
+  describe('aantalKeerA( string met a\'s )...', function() {
     it('...geeft het correcte aantal a\'s  terug', function() {
       expect(opgave10.aantalKeerA("hallo")).to.equal(1, 'aantalKeerA("hallo") zou 1 terug moeten geven');
       expect(opgave10.aantalKeerA("aas")).to.equal(2, 'aantalKeerA("aas") zou 2 terug moeten geven');
@@ -253,6 +256,62 @@ describe('Opgave 10', function() {
 });
 
 
+/* ******************* */
+/* **** Opgave 11 **** */
+/* ******************* */
+describe('Opgave 11', function() {
+  describe('isPalindroom(x)...', function() {
+    it('...geeft false terug als x geen palindroom is.', function() {
+      expect(opgave11.isPalindroom("hoi")).to.equal(false, 'isPalindroom("hoi") zou false terug moeten geven');
+      expect(opgave11.isPalindroom("doktersopleiding")).to.equal(false, 'isPalindroom("doktersopleiding") zou false terug moeten geven');expect(opgave11.isPalindroom("vis")).to.equal(false, 'isPalindroom("vis") zou false terug moeten geven');
+      expect(opgave11.isPalindroom("123456")).to.equal(false, 'isPalindroom("123456") zou false terug moeten geven');
+    });
+    it('...geeft true terug als x een palindroom is.', function() {
+      expect(opgave11.isPalindroom("lepel")).to.equal(true, 'isPalindroom("lepel") zou true terug moeten geven');
+      expect(opgave11.isPalindroom("partyboobytrap")).to.equal(true, 'isPalindroom("partyboobytrap") zou true terug moeten geven');
+      expect(opgave11.isPalindroom("129858921")).to.equal(true, 'isPalindroom("129858921") zou true terug moeten geven');
+    });
+    it('...geeft true terug als x één teken lang is.', function() {
+      expect(opgave11.isPalindroom("l")).to.equal(true, 'isPalindroom("l") zou true terug moeten geven');
+      expect(opgave11.isPalindroom("9")).to.equal(true, 'isPalindroom("9") zou true terug moeten geven');
+      expect(opgave11.isPalindroom("%")).to.equal(true, 'isPalindroom("%") zou true terug moeten geven');
+    });
+    it('...geeft true terug als x een lege string is.', function() {
+      expect(opgave11.isPalindroom("")).to.equal(true, 'isPalindroom("") zou true terug moeten geven');
+    });
+  });
+});
+
+
+/* ******************* */
+/* **** Opgave 12 **** */
+/* ******************* */
+describe('Opgave 12', function() {
+  describe('isPalindroom(x)...', function() {
+    it('...geeft true terug als x een palindroom is.', function() {
+      expect(opgave12.isPalindroom("lepel")).to.equal(true, 'isPalindroom("lepel") zou true terug moeten geven');
+      expect(opgave12.isPalindroom("partyboobytrap")).to.equal(true, 'isPalindroom("partyboobytrap") zou true terug moeten geven');
+    });
+    it('...geeft false terug als x geen palindroom is.', function() {
+      expect(opgave12.isPalindroom("hoi")).to.equal(false, 'isPalindroom("hoi") zou false terug moeten geven');
+      expect(opgave12.isPalindroom("doktersopleiding")).to.equal(false, 'isPalindroom("doktersopleiding") zou false terug moeten geven');
+    });
+    it('...geeft false terug als x cijfers bevat.', function() {
+      expect(opgave12.isPalindroom("dokters0pl3iding")).to.equal(false, 'isPalindroom("doktersopleiding") zou false terug moeten geven');
+      expect(opgave12.isPalindroom("123456")).to.equal(false, 'isPalindroom("123456") zou false terug moeten geven');
+      expect(opgave12.isPalindroom("129858921")).to.equal(false, 'isPalindroom("129858921") zou false terug moeten geven');
+    });
+    
+    it('...geeft false terug als x één teken lang is.', function() {
+      expect(opgave12.isPalindroom("l")).to.equal(false, 'isPalindroom("l") zou false terug moeten geven');
+      expect(opgave12.isPalindroom("9")).to.equal(false, 'isPalindroom("9") zou false terug moeten geven');
+      expect(opgave12.isPalindroom("%")).to.equal(false, 'isPalindroom("%") zou false terug moeten geven');
+    });
+    it('...geeft false terug als x een lege string is.', function() {
+      expect(opgave12.isPalindroom("")).to.equal(false, 'isPalindroom("") zou false terug moeten geven');
+    });
+  });
+});
 
 
 delete require.cache[require.resolve('../opgave-1.js')]
@@ -265,3 +324,4 @@ delete require.cache[require.resolve('../opgave-7.js')]
 delete require.cache[require.resolve('../opgave-8.js')]
 delete require.cache[require.resolve('../opgave-9.js')]
 delete require.cache[require.resolve('../opgave-10.js')]
+delete require.cache[require.resolve('../opgave-11.js')]
