@@ -11,7 +11,8 @@ const opgave10 = require('../opgave-10.js')
 const opgave11 = require('../opgave-11.js')
 const opgave12 = require('../opgave-12.js')
 const opgave13 = require('../opgave-13.js')
-const opgave13 = require('../opgave-14.js')
+const opgave14 = require('../opgave-14.js')
+const opgave15 = require('../opgave-15.js')
 const chai = require('chai')
 const expect = chai.expect
 const assert = chai.assert
@@ -385,23 +386,23 @@ describe('Opgave 14', function() {
 describe('Opgave 15', function() {
   describe('isAnagram(x, y)...', function() {
     it('...geeft true terug als x en y uit dezelfde kleine letters bestaan.', function() {
-      expect(opgave14.isAnagram("woord", "oordw")).to.equal(true, 'isAnagram("woord", "oordw") zou true terug moeten geven');
-      expect(opgave14.isAnagram("computer", "uercmotp")).to.equal(true, 'isAnagram("computer", "uercmotp") zou true terug moeten geven');
+      expect(opgave15.isAnagram("woord", "oordw")).to.equal(true, 'isAnagram("woord", "oordw") zou true terug moeten geven');
+      expect(opgave15.isAnagram("computer", "uercmotp")).to.equal(true, 'isAnagram("computer", "uercmotp") zou true terug moeten geven');
     });
     it('...geeft false terug als x en y niet uit dezelfde kleine letters bestaan.', function() {
-      expect(opgave14.isAnagram("woord", "hallo")).to.equal(false, 'isAnagram("woord", "hallo") zou false terug moeten geven');
-      expect(opgave14.isAnagram("computer", "testwoord")).to.equal(false, 'isAnagram("computer", "testwoord") zou false terug moeten geven');
+      expect(opgave15.isAnagram("woord", "hallo")).to.equal(false, 'isAnagram("woord", "hallo") zou false terug moeten geven');
+      expect(opgave15.isAnagram("computer", "testwoord")).to.equal(false, 'isAnagram("computer", "testwoord") zou false terug moeten geven');
     });
     it('...werkt ook correct met hoofdletters, cijfers, spaties en leestekens.', function() {
-      expect(opgave14.isAnagram("wOOrd", "oordw")).to.equal(true, 'isAnagram("woord", "oordw") zou true terug moeten geven');
-      expect(opgave14.isAnagram("computer", "uErCmotP")).to.equal(true, 'isAnagram("computer", "uercmotp") zou true terug moeten geven');
-      expect(opgave14.isAnagram("Hoofdl3tt3r!", "OOdfL33tt!rh")).to.equal(true, 'isAnagram("Hoofdl3tt3r!", "OOdfL33tt!rh") zou true terug moeten geven');
-      expect(opgave14.isAnagram("Hoofdl3tt3r!", "dfL33tt!rh")).to.equal(false, 'isAnagram("Hoofdl3tt3r!", "dfL33tt!rh") zou false terug moeten geven');
+      expect(opgave15.isAnagram("wOOrd", "oordw")).to.equal(true, 'isAnagram("woord", "oordw") zou true terug moeten geven');
+      expect(opgave15.isAnagram("computer", "uErCmotP")).to.equal(true, 'isAnagram("computer", "uercmotp") zou true terug moeten geven');
+      expect(opgave15.isAnagram("Hoofdl3tt3r!", "OOdfL33tt!rh")).to.equal(true, 'isAnagram("Hoofdl3tt3r!", "OOdfL33tt!rh") zou true terug moeten geven');
+      expect(opgave15.isAnagram("Hoofdl3tt3r!", "dfL33tt!rh")).to.equal(false, 'isAnagram("Hoofdl3tt3r!", "dfL33tt!rh") zou false terug moeten geven');
     });
     it('...werkt ook als één of beide parameters een lege string is', function() {
-      expect(opgave14.isAnagram("", "")).to.equal(true, 'isAnagram("", "") zou true terug moeten geven');
-      expect(opgave14.isAnagram("", "anders")).to.equal(false, 'isAnagram("", "anders") zou false terug moeten geven');
-      expect(opgave14.isAnagram("anders", "")).to.equal(false, 'isAnagram("anders", "") zou false terug moeten geven');
+      expect(opgave15.isAnagram("", "")).to.equal(true, 'isAnagram("", "") zou true terug moeten geven');
+      expect(opgave15.isAnagram("", "anders")).to.equal(false, 'isAnagram("", "anders") zou false terug moeten geven');
+      expect(opgave15.isAnagram("anders", "")).to.equal(false, 'isAnagram("anders", "") zou false terug moeten geven');
     });
   });
 });
@@ -421,3 +422,4 @@ delete require.cache[require.resolve('../opgave-11.js')]
 delete require.cache[require.resolve('../opgave-12.js')]
 delete require.cache[require.resolve('../opgave-13.js')]
 delete require.cache[require.resolve('../opgave-14.js')]
+delete require.cache[require.resolve('../opgave-15.js')]
