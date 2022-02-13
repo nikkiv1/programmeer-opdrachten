@@ -10,6 +10,7 @@ const opgave9 = require('../opgave-9.js')
 const opgave10 = require('../opgave-10.js')
 const opgave11 = require('../opgave-11.js')
 const opgave12 = require('../opgave-12.js')
+const opgave13 = require('../opgave-13.js')
 const chai = require('chai')
 const expect = chai.expect
 const assert = chai.assert
@@ -309,6 +310,28 @@ describe('Opgave 12', function() {
     });
     it('...geeft false terug als x een lege string is.', function() {
       expect(opgave12.isPalindroom("")).to.equal(false, 'isPalindroom("") zou false terug moeten geven');
+    });
+  });
+});
+
+
+/* ******************* */
+/* **** Opgave 13 **** */
+/* ******************* */
+describe('Opgave 13', function() {
+  describe('keerOm(x)...', function() {
+    it('...geeft een omgekeerde string terug bij meerdere letters.', function() {
+      expect(opgave13.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
+      expect(opgave13.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
+      expect(opgave13.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
+    });
+    it('...geeft een omgekeerde string terug bij letter, cijfers, spaties en leestekens.', function() {
+      expect(opgave13.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
+      expect(opgave13.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
+      expect(opgave13.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
+    });
+    it('...geeft een lege string terug als de input een lege string is', function() {
+      expect(opgave13.keerOm("")).to.equal("", 'keerOm("") zou "" terug moeten geven');
     });
   });
 });
