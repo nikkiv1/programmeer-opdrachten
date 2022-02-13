@@ -1,17 +1,23 @@
-module.exports = {keerOm}
+module.exports = {isPalindroom}
 
 /*  Algoritmiek opgave 13
-    Hieronder zie je de functie 'keerOm(x)'
-    Deze functie krijgt een string als parameter mee
-    en moet deze string omgedraaid weer teruggeven.
-    keerOm("hallo") geeft dus "ollah" terug.
+    Ook deze opgave ben je bezig met de functie isPalindroom()
+    Bij deze opdracht geldt hetzelfde als bij opgave 12, maar
+    met deze extra voorwaarde: de functie is hoofdletterONGEVOELIG
 
-    Opdracht: keerOm() geeft nu altijd een lege string terug.
+    isPalindroom("lepel") geeft true, maar
+    isPalindroom("LEpel") geef OOk true.
+
+    Tip: kijk eens op
+      https://www.w3schools.com/jsref/jsref_tolowercase.asp
+      https://www.w3schools.com/jsref/jsref_touppercase.asp
+    
+    Opdracht: isPalindroom() geeft nu altijd false terug.
     Maak de functie af zodat deze werkt als beschreven.
 */
 
-function keerOm(x) {
-  var teruggeefWaarde = "";
+function isPalindroom(x) {
+  var teruggeefWaarde = false;
 
 
 

@@ -11,6 +11,7 @@ const opgave10 = require('../opgave-10.js')
 const opgave11 = require('../opgave-11.js')
 const opgave12 = require('../opgave-12.js')
 const opgave13 = require('../opgave-13.js')
+const opgave13 = require('../opgave-14.js')
 const chai = require('chai')
 const expect = chai.expect
 const assert = chai.assert
@@ -302,7 +303,6 @@ describe('Opgave 12', function() {
       expect(opgave12.isPalindroom("123456")).to.equal(false, 'isPalindroom("123456") zou false terug moeten geven');
       expect(opgave12.isPalindroom("129858921")).to.equal(false, 'isPalindroom("129858921") zou false terug moeten geven');
     });
-    
     it('...geeft false terug als x één teken lang is.', function() {
       expect(opgave12.isPalindroom("l")).to.equal(false, 'isPalindroom("l") zou false terug moeten geven');
       expect(opgave12.isPalindroom("9")).to.equal(false, 'isPalindroom("9") zou false terug moeten geven');
@@ -319,19 +319,61 @@ describe('Opgave 12', function() {
 /* **** Opgave 13 **** */
 /* ******************* */
 describe('Opgave 13', function() {
+  describe('isPalindroom(x)...', function() {
+    it('...geeft true terug als x een palindroom met alleen kleine letters is.', function() {
+      expect(opgave13.isPalindroom("lepel")).to.equal(true, 'isPalindroom("lepel") zou true terug moeten geven');
+      expect(opgave13.isPalindroom("partyboobytrap")).to.equal(true, 'isPalindroom("partyboobytrap") zou true terug moeten geven');
+    });
+    it('...geeft true terug als x een palindroom met alleen hoofdletters is.', function() {
+      expect(opgave13.isPalindroom("LEPEL")).to.equal(true, 'isPalindroom("LEPEL") zou true terug moeten geven');
+      expect(opgave13.isPalindroom("PARTYBOOBYTRAP")).to.equal(true, 'isPalindroom("PARTYBOOBYTRAP") zou true terug moeten geven');
+    });
+    it('...geeft true terug als x een palindroom met symmetrische hoofdletters en kleine letters', function() {
+      expect(opgave13.isPalindroom("lEpEl")).to.equal(true, 'isPalindroom("lEpEl") zou true terug moeten geven');
+      expect(opgave13.isPalindroom("paRtyBooBytRap")).to.equal(true, 'isPalindroom("paRtyBooBytRap") zou true terug moeten geven');
+    });
+    it('...geeft true terug als x een palindroom met asymmetrische hoofdletters en kleine letters', function() {
+      expect(opgave13.isPalindroom("LepEl")).to.equal(true, 'isPalindroom("LepEl") zou true terug moeten geven');
+      expect(opgave13.isPalindroom("pArtYboObyTrap")).to.equal(true, 'isPalindroom("pArtYboObyTrap") zou true terug moeten geven');
+    });
+    it('...geeft false terug als x geen palindroom is.', function() {
+      expect(opgave13.isPalindroom("hoi")).to.equal(false, 'isPalindroom("hoi") zou false terug moeten geven');
+      expect(opgave13.isPalindroom("doktersopleiding")).to.equal(false, 'isPalindroom("doktersopleiding") zou false terug moeten geven');
+    });
+    it('...geeft false terug als x cijfers bevat.', function() {
+      expect(opgave13.isPalindroom("dokters0pl3iding")).to.equal(false, 'isPalindroom("doktersopleiding") zou false terug moeten geven');
+      expect(opgave13.isPalindroom("123456")).to.equal(false, 'isPalindroom("123456") zou false terug moeten geven');
+      expect(opgave13.isPalindroom("129858921")).to.equal(false, 'isPalindroom("129858921") zou false terug moeten geven');
+    });
+    it('...geeft false terug als x één teken lang is.', function() {
+      expect(opgave13.isPalindroom("l")).to.equal(false, 'isPalindroom("l") zou false terug moeten geven');
+      expect(opgave13.isPalindroom("9")).to.equal(false, 'isPalindroom("9") zou false terug moeten geven');
+      expect(opgave13.isPalindroom("%")).to.equal(false, 'isPalindroom("%") zou false terug moeten geven');
+    });
+    it('...geeft false terug als x een lege string is.', function() {
+      expect(opgave13.isPalindroom("")).to.equal(false, 'isPalindroom("") zou false terug moeten geven');
+    });
+  });
+});
+
+
+/* ******************* */
+/* **** Opgave 14 **** */
+/* ******************* */
+describe('Opgave 13', function() {
   describe('keerOm(x)...', function() {
     it('...geeft een omgekeerde string terug bij meerdere letters.', function() {
-      expect(opgave13.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
-      expect(opgave13.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
-      expect(opgave13.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
+      expect(opgave14.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
+      expect(opgave14.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
+      expect(opgave14.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
     });
     it('...geeft een omgekeerde string terug bij letter, cijfers, spaties en leestekens.', function() {
-      expect(opgave13.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
-      expect(opgave13.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
-      expect(opgave13.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
+      expect(opgave14.keerOm("woord")).to.equal("droow", 'keerOm("woord") zou "droow" terug moeten geven');
+      expect(opgave14.keerOm("computer")).to.equal("retupmoc", 'keerOm("computer") zou "retupmoc" terug moeten geven');
+      expect(opgave14.keerOm("Hoofdletter")).to.equal("retteldfooH", 'keerOm("Hoofdletter") zou "retteldfooH" terug moeten geven');
     });
     it('...geeft een lege string terug als de input een lege string is', function() {
-      expect(opgave13.keerOm("")).to.equal("", 'keerOm("") zou "" terug moeten geven');
+      expect(opgave14.keerOm("")).to.equal("", 'keerOm("") zou "" terug moeten geven');
     });
   });
 });
@@ -348,3 +390,6 @@ delete require.cache[require.resolve('../opgave-8.js')]
 delete require.cache[require.resolve('../opgave-9.js')]
 delete require.cache[require.resolve('../opgave-10.js')]
 delete require.cache[require.resolve('../opgave-11.js')]
+delete require.cache[require.resolve('../opgave-12.js')]
+delete require.cache[require.resolve('../opgave-13.js')]
+delete require.cache[require.resolve('../opgave-14.js')]
