@@ -1,6 +1,6 @@
 # Kleine programmeeropdrachten
 
-Dit repository bevat 10 programmeeropdrachten. Ga als volgt te werk:
+Dit repository bevat 15 kleine programmeeropdrachten om je te leren kleine problemen in code op te lossen. Ga als volgt te werk:
 
 1.  Maak een persoonlijke kopie van dit repository door op 'Use this template' te klikken. Geef je repo een begrijpelijke naam. Deze repo wordt onderdeel van je persoonlijke GitHub-account.
 2.  Ga naar het dashboard in GitPod, klik op 'New Workspace' en kies de repo die zojuist hebt aangemaakt.
