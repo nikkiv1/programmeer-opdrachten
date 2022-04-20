@@ -12,7 +12,7 @@ module.exports = {isAnagram}
     implementeer deze functionaliteit pas als de functie
     perfect werkt met kleine letters.
 
-    Opdracht: keerOm() geeft nu altijd een lege string terug.
+    Opdracht: isAnagram() geeft nu altijd false terug.
     Maak de functie af zodat deze werkt als beschreven.
 */
 
